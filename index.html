@@ -26,7 +26,7 @@
         </a>
         <a :href="'https://github.com/'+github" class="btn btn-lg btn-light col-12 col-sm-auto">
           <i class="fa fa-github"></i>
-          Github
+          Facebook
         </a>
       </div>
     </div>
@@ -44,28 +44,37 @@
                 <h5>{{ experience.name }}</h5>
               </div>
               <p class="lead text-muted">{{ experience.title }}</p>
+
+              <img class="img-fluid float-right" :src="experience.logo">
+
               <p>{{ experience.description }}</p>
+
             </li>
           </ul>
         </div>
         <div class="card my-4">
           <div class="card-header">
-            <h3 class="m-0">Formation</h3>
+            <h3 class="m-0">Education</h3>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item" v-for="formation in formations">
+            <li class="list-group-item" v-for="Education in Education">
               <div class="clearfix">
-                <span class="badge badge-dark float-right" v-if="formation.dateEnd">{{ formation.dateBegin }} - {{ formation.dateEnd }}</span>
-                <span class="badge badge-dark float-right" v-else>{{ formation.dateBegin }}</span>
-                <h5>{{ formation.university }}</h5>
+                <span class="badge badge-dark float-right" v-if="Education.dateEnd">{{ Education.dateBegin }} - {{ Education.dateEnd }}</span>
+                <span class="badge badge-dark float-right" v-else>{{ Education.dateBegin }}</span>
+                <h5>{{ Education.university }}</h5>
               </div>
-              <p class="lead text-muted">{{ formation.name }}</p>
+
+
+              <p class="lead text-muted">{{ Education.name }}</p>
             </li>
           </ul>
         </div>
       </div>
       <div class="col-12 col-md-4">
         <div class="card">
+
+
+
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <h5>Languages</h5>
